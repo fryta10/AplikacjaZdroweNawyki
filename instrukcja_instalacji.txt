@@ -1,0 +1,8 @@
+Instrukcja instalacji aplikacji na telefonie:
+ 
+1. pobierz plik app-debug.apk na telefon (pooprzez USB). 
+2. Na telefonie Otwórz Ustawienia - Bezpieczeństwo
+3. Włącz opcję "Zezwalaj na instalację aplikacji z nieznanych źródeł" (dla aplikacji menedżera plików).
+4. Otwórz menedżer plików, znajdź plik app-debug.apk i kliknij "Zainstaluj".
+5. Po instalacji aplikacja pojawi się na ekranie głównym telefonu.
+6. Kliknij ikonę aplikacji, aby ją uruchomić.
