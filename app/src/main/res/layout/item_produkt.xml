@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    android:layout_marginBottom="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+
+    <TextView
+            android:id="@+id/textViewNazwaProduktu"
+            android:text="nazwa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+             android:layout_weight="1"
+            android:textSize="16sp"
+            android:padding="4dp"
+            android:textColor="@android:color/black" />
+
+        <ImageButton
+            android:id="@+id/btn_usun_produkt"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_remove_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Usun produkt"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/textViewKalorie"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0 kcal"
+            android:textSize="14sp"
+            android:minWidth="78dp"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textViewBialka"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0 B"
+            android:textSize="14sp"
+            android:minWidth="78dp"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textViewTluszcze"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0 T"
+            android:textSize="14sp"
+            android:minWidth="78dp"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textViewWeglowodany"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0 W"
+            android:textSize="14sp"
+            android:minWidth="78dp"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+</LinearLayout>

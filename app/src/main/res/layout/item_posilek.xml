@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Nazwa posiłku i przycisk dodawania produktu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/tv_nazwa_posilku"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Posiłek"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <ImageButton
+            android:id="@+id/btn_dodaj_produkt"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@android:drawable/ic_input_add"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Dodaj produkt"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 kcal"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:minWidth="78dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 B"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:minWidth="78dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 T"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:minWidth="78dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 W"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:minWidth="78dp"/>
+
+    </LinearLayout>
+
+    <!-- Lista produktów -->
+    <LinearLayout
+        android:id="@+id/ll_lista_produktow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+    <!-- android:visibility="gone" -->
+        </LinearLayout>
+    </LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Inzynierkav3"
+        tools:targetApi="31">
+        <!-- Włączenie profilowania -->
+        <profileable android:shell="true" />
+        <activity
+            android:name=".aktywnosci.Lista_Zakupow"
+            android:exported="false" />
+        <activity
+            android:name=".aktywnosci.PodsumowanieActivity"
+            android:exported="false"
+            android:label="@string/title_activity_podsumowanie"
+            android:theme="@style/Theme.Inzynierkav3" />
+        <activity
+            android:name=".aktywnosci.PodstawoweInformacjeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".aktywnosci.AktywnoscFizycznaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".aktywnosci.MasaZmianaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".aktywnosci.MasaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".aktywnosci.CeleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".aktywnosci.DodanieKonkretnegoProduktuuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".aktywnosci.DodanieKonkretnegoProduktuActivity"
+            android:exported="false"
+            android:label="@string/title_activity_dodanie_konkretnego_produktu"
+            android:theme="@style/Theme.Inzynierkav3" />
+        <activity
+            android:name=".aktywnosci.DodawanieProduktowActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".aktywnosci.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Inzynierkav3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentMASAZMIANA_container"
+    android:layout_height="match_parent"
+    android:background="#1F1F1F"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2C2C2C">
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="wróc do ekranu głownego"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Tygodniowa zmiana masy ciała"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <!-- Górna sekcja z opisem -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2C2C2C"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+        </RelativeLayout>
+
+        <!-- Sekcja wprowadzania danych -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2C2C2C"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zmiana masy ciała (kg/tyg)"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/spinner_zmiana_wagi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#404040"
+                android:textColorHint="#BBBBBB"
+                android:padding="16dp"
+                android:popupBackground="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:dropDownVerticalOffset="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Przycisk zapisu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_zapisz_zmiane_wagi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zapisz zmianę"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:background="#00FF00"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

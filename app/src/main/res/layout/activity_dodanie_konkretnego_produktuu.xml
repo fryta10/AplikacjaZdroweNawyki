@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TextView do wyświetlania nazwy produktu -->
+    <TextView
+        android:id="@+id/textViewNazwaProduktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nazwa Produktu"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewKalorie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kcal: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewBialka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Białka: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewTluszcze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tluszcze: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:id="@+id/textViewWeglowodany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weglowodany:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/editTextWaga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź wagę"
+        android:padding="16sp"
+        android:inputType="number"
+        android:maxLength="5" />
+    <Button
+        android:id="@+id/buttonDodajProdukt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dodaj Produkt" />
+
+
+</LinearLayout>

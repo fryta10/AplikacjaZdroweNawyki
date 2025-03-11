@@ -1,0 +1,139 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1F1F"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Nagłówek z przyciskiem wstecz -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2C2C2C">
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Wróć do poprzedniego ekranu"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Podstawowe informacje"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <!-- Sekcja wprowadzenia wieku -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2C2C2C"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wiek"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="8dp" />
+            <EditText
+                android:id="@+id/et_wiek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#404040"
+                android:textColor="#FFFFFF"
+                android:hint="Wprowadź wiek"
+                android:textColorHint="#FFFFFF"
+                android:inputType="number"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Sekcja wyboru płci -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2C2C2C"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Płeć"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="8dp" />
+            <RadioGroup
+                android:id="@+id/rg_plec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_plec_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mężczyzna"
+                    android:textColor="#A0A0A0"
+                    android:buttonTint="#6200EE"/>
+                <RadioButton
+                    android:id="@+id/rb_plec_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kobieta"
+                    android:textColor="#A0A0A0"
+                    android:buttonTint="#6200EE"
+                    android:layout_marginStart="32dp"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Sekcja wprowadzenia wzrostu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2C2C2C"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wzrost"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="8dp" />
+            <EditText
+                android:id="@+id/et_wzrost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#404040"
+                android:textColor="#FFFFFF"
+                android:hint="Wprowadź wzrost (cm)"
+                android:textColorHint="#A0A0A0"
+                android:inputType="number"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Przycisk Zapisz -->
+        <Button
+            android:id="@+id/btn_zapisz_informacje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zapisz"
+            android:textColor="#FFFFFF"
+            android:background="#6200EE"
+            android:padding="12dp"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

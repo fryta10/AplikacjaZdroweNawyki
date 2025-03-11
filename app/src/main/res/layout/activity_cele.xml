@@ -1,0 +1,296 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1F1F1F"
+    android:padding="16dp">
+
+    <!-- ScrollView do przewijalnej zawartości -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Górna sekcja z przyciskiem wstecz i tekstem -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2C2C2C"
+            android:padding="2dp">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Wróć do ekranu głównego"
+                android:layout_alignParentStart="true" />
+
+            <!-- Tekst obok przycisku wstecz -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Twoje Informacje: "
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp" />
+        </RelativeLayout>
+
+        <!-- Sekcja z datą i tygodniami do celu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2C2C2C"
+            android:padding="5dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_zero_kcal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Twoje zero kaloryczne: "
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tv_goal_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="twój cel kaloryczny: "
+                android:textSize="22sp"
+                android:textColor="#00FF00" />
+
+            <TextView
+                android:id="@+id/tv_nazdwyzka_kcal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nadwyżka kaloryczna: "
+                android:textSize="16sp"
+                android:textColor="#A0A0A0" />
+        </LinearLayout>
+
+        <!-- Sekcja szczegółów celu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2C2C2C"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Podstawowe Informacje"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_plecinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="płeć: "
+                        android:textColor="#A0A0A0"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_wzrostinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="wzrost: "
+                        android:textColor="#A0A0A0"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_wiekinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="wiek: "
+                        android:textColor="#A0A0A0"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_informacje"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#2C2C2C"
+                    android:textColor="#A0A0A0"
+                    android:contentDescription="Informacje"
+                    android:src="@drawable/ic_arrow"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#404040"
+                android:layout_marginVertical="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masa ciała"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_masa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="69 kg → 74 kg"
+                    android:textColor="#A0A0A0"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_masa"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#2C2C2C"
+                    android:textColor="#A0A0A0"
+                    android:contentDescription="Masa"
+                    android:src="@drawable/ic_arrow"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#404040"
+                android:layout_marginVertical="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tempo zmiany masy ciała"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_zmiana_wagi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0,3 kg / tyg."
+                    android:textColor="#A0A0A0"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_masa_Tempo"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#2C2C2C"
+                    android:contentDescription="Tempo"
+                    android:textColor="#A0A0A0"
+                    android:src="@drawable/ic_arrow"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#404040"
+                android:layout_marginVertical="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aktywność fizyczna"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_aktywnosc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Średnia"
+                    android:textColor="#A0A0A0"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_aktywnosc_fizyczna"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="#2C2C2C"
+                    android:contentDescription="Aktywność fizyczna"
+                    android:textColor="#A0A0A0"
+                    android:src="@drawable/ic_arrow"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+    <!-- Przycisk Zapisz na dole ekranu -->
+    <Button
+        android:id="@+id/btn_zapisz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zapisz"
+        android:background="?attr/colorPrimaryDark"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_kalkulator">
+
+    <!-- Dodaj swoje fragmenty tutaj -->
+    <fragment
+        android:id="@+id/nav_kalkulator"
+        android:name="com.example.inzynierkav3.aktywnosci.KalkulatorFragment"
+        android:label="@string/kalkulator_fragment_label"
+        tools:layout="@layout/fragment_kalkulator" />
+
+    <fragment
+        android:id="@+id/nav_dziennik"
+        android:name="com.example.inzynierkav3.aktywnosci.DziennikFragment"
+        android:label="@string/dziennik_fragment_label"
+        tools:layout="@layout/fragment_dziennik" />
+
+    <fragment
+        android:id="@+id/nav_cele"
+        android:name="com.example.inzynierkav3.aktywnosci.CeleFragment"
+        android:label="@string/cele_fragment_label"
+        tools:layout="@layout/fragment_cele" />
+  
+
+</navigation>

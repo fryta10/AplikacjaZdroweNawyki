@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Główna sekcja aplikacji -->
+    <group android:id="@+id/main_group">
+        <item
+            android:id="@+id/nav_dziennik"
+            android:title="📖 Dziennik Spożycia" />
+
+        <item
+            android:id="@+id/nav_cele"
+            android:title="🎯 Cele Żywieniowe" />
+
+        <item
+            android:id="@+id/nav_podsumowanie"
+            android:title="📊 Podsumowanie" />
+    </group>
+
+    <!-- Dodatkowe opcje -->
+    <group android:id="@+id/extra_group">
+        <item
+            android:id="@+id/nav_zakupy"
+            android:title="🛒 Lista Zakupów" />
+    </group>
+
+</menu>

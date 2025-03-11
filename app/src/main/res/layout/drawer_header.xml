@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/drawer_header_background">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+       android:src="@drawable/ic_arrow"
+        android:scaleType="centerCrop"
+        android:background="@drawable/baseline_no_food_24"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Osiągaj cele z nami!"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+
+</LinearLayout>

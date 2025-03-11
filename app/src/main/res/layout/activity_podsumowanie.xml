@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <!-- Strzałka powrotu -->
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:contentDescription="Powrót"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/summary_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Podsumowanie"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <!-- Sekcja nawigacji między dniem, tygodniem i miesiącem -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/button_podsumowanie_dnia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dzień"
+                android:background="@drawable/selector_button_toggle"/>
+
+            <Button
+                android:id="@+id/button_podsumowanie_tygodnia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tydzień"
+                android:background="@drawable/selector_button_toggle"/>
+
+            <Button
+                android:id="@+id/button_podsumowanie_miesiaca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Miesiąc"
+                android:background="@drawable/selector_button_toggle"/>
+        </LinearLayout>
+
+        <!-- Sekcja wyboru daty -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/button_data_wstecz"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_arrow_left_24"
+                android:contentDescription="Poprzedni dzień"/>
+            <TextView
+                android:id="@+id/textview_wybrana_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/rounded_background"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"/>
+            <ImageButton
+                android:id="@+id/button_data_next"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_arrow_right_24"
+                android:contentDescription="Następny dzień"/>
+        </LinearLayout>
+
+        <!-- Wykres sumaryczny -->
+        <LinearLayout
+            android:id="@+id/chart_section"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/wykres_pie"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="gone"/>
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/wykres_bar"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Statystyki dla wybranego okresu -->
+        <LinearLayout
+            android:id="@+id/statistics_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/stats_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Szczegóły dla wybranego okresu"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Nagłówki dla wartości i celu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Spożycie"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cel"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Kalorie -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/label_kalorie"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🔥 Kalorie" />
+
+                <TextView
+                    android:id="@+id/kalorie_spozyte"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 kcal" />
+
+                <TextView
+                    android:id="@+id/kalorie_cel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2000 kcal" />
+            </LinearLayout>
+
+            <!-- Białka -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/label_bialka"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="💪 Białka" />
+
+                <TextView
+                    android:id="@+id/bialka_spozyte"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 %" />
+
+                <TextView
+                    android:id="@+id/bialka_cel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="20 %" />
+            </LinearLayout>
+
+            <!-- Tłuszcze -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/label_tluszcze"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🧈 Tłuszcze" />
+
+                <TextView
+                    android:id="@+id/tluszcze_spozyte"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 %" />
+
+                <TextView
+                    android:id="@+id/tluszcze_cel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="30 %" />
+            </LinearLayout>
+
+            <!-- Węglowodany -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/label_weglowodany"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🍞 Węglowodany" />
+
+                <TextView
+                    android:id="@+id/wegle_spozyte"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 %" />
+
+                <TextView
+                    android:id="@+id/wegle_cel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="50 %" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
